@@ -4,8 +4,6 @@ import BasePage from './components/basePase'
 
 
 function App(): JSX.Element {
-    const ipcHandle = (): void => window.electron.ipcRenderer.send('ping')
-
     return (
         <div className="min-h-screen">
             <Routes>
