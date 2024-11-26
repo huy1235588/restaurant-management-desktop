@@ -1,3 +1,5 @@
+const { default: plugin } = require("eslint-plugin-react");
+
 module.exports = {
     extends: [
         'eslint:recommended',
@@ -5,6 +7,9 @@ module.exports = {
         'plugin:react/jsx-runtime',
         '@electron-toolkit/eslint-config-ts/recommended',
         '@electron-toolkit/eslint-config-prettier'
+    ],
+    plugin:[    
+        "prettier"
     ],
     rules: {
         '@typescript-eslint/explicit-function-return-type': 'off',
@@ -14,13 +19,5 @@ module.exports = {
         'no-unused-vars': 'off',
         '@typescript-eslint/no-var-requires': 'off',
         'react/react-in-jsx-scope': 'off',
-        'prettier/prettier': [
-            'error',
-            {
-                endOfLine: 'auto',
-                // singleQuote: true,
-                parser: 'flow'
-            }
-        ]
     }
 }
